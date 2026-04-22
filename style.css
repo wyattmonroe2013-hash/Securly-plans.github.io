@@ -1,0 +1,43 @@
+/* Container for all games */
+#game-container {
+    display: grid;
+    /* This line is the magic: it auto-fills the row with cards at least 180px wide */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Game Card */
+.game-card {
+    background: #222;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover effect like CrazyGames */
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.game-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Maintains a consistent "thumbnail" look */
+    object-fit: cover;
+}
+
+.game-card h3 {
+    font-size: 1rem;
+    margin: 10px 0 5px 0;
+}
+
+.game-card p {
+    font-size: 0.8rem;
+    color: #888;
+    padding-bottom: 10px;
+}
