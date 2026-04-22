@@ -1,14 +1,16 @@
 [
   {
+    "id": 1,
     "title": "Space Invaders",
-    "description": "Classic arcade action.",
-    "thumbnail": "assets/space.jpg",
-    "url": "https://example.com/play-space"
+    "thumbnail": "assets/images/space.jpg",
+    "category": "Action",
+    "url": "games/space-invaders/index.html"
   },
   {
-    "title": "Pixel Knight",
-    "description": "A 2D platforming adventure.",
-    "thumbnail": "assets/knight.jpg",
-    "url": "https://example.com/play-knight"
+    "id": 2,
+    "title": "Retro Racer",
+    "thumbnail": "assets/images/race.jpg",
+    "category": "Driving",
+    "url": "https://external-game-link.com"
   }
 ]
