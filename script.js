@@ -72,19 +72,22 @@ async function initPlayPage() {
     const game = games.find(g => g.id === gameId);
 
     if (game) {
-        // 3. Inject the Iframe and Title
-        playerWrapper.innerHTML = `
-            <div class="video-container">
-                <iframe src="${game.url}" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="game-details">
+    playerWrapper.innerHTML = `
+        <div class="game-screen">
+            <iframe src="${game.url}" allowfullscreen id="game-iframe"></iframe>
+        </div>
+        <div class="game-info-panel">
+            <div class="game-title-area">
+                <span class="category-pill">${game.category}</span>
                 <h1>${game.title}</h1>
-                <span class="tag">${game.category}</span>
-                <p>Playing in full-screen mode is recommended for the best experience.</p>
             </div>
-        `;
-        document.title = `Playing ${game.title} | Save and Load 2`;
-    } else {
+            <div class="actions-area">
+                <button onclick="toggleFullscreen()">⛶ Fullscreen</button>
+            </div>
+        </div>
+    `;
+    document.title = "Playing " + game.title + " | Save and Load2";
+}else {
         playerWrapper.innerHTML = `<h2>Game not found! <a href="index.html">Go Back</a></h2>`;
     }
 }
