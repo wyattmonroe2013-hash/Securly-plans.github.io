@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Space Invaders",
+    "description": "Classic arcade action.",
+    "thumbnail": "assets/space.jpg",
+    "url": "https://example.com/play-space"
+  },
+  {
+    "title": "Pixel Knight",
+    "description": "A 2D platforming adventure.",
+    "thumbnail": "assets/knight.jpg",
+    "url": "https://example.com/play-knight"
+  }
+]
