@@ -83,7 +83,7 @@ async function initPlayPage() {
                 <p>Playing in full-screen mode is recommended for the best experience.</p>
             </div>
         `;
-        document.title = `Playing ${game.title} | My Game Portal`;
+        document.title = `Playing ${game.title} | Save and Load 2`;
     } else {
         playerWrapper.innerHTML = `<h2>Game not found! <a href="index.html">Go Back</a></h2>`;
     }
