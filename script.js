@@ -1,7 +1,7 @@
 /**
  * Configuration & Data Fetching
  */
-const JSON_URL = 'games.json';
+const JSON_URL = './games.json';
 
 // Utility function to fetch games
 async function fetchGames() {
