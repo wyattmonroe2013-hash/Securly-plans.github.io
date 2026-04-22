@@ -1,97 +1,85 @@
-/**
- * Configuration & Data Fetching
- */
-const JSON_URL = './games.json';
+const JSON_FILE = './games.json'; // Added ./ for GitHub Pages compatibility
 
-// Utility function to fetch games
-async function fetchGames() {
+async function init() {
     try {
-        const response = await fetch(JSON_URL);
-        if (!response.ok) throw new Error("Could not load games data.");
-        return await response.json();
-    } catch (error) {
-        console.error("Error:", error);
-        return [];
+        const response = await fetch(JSON_FILE);
+        if (!response.ok) throw new Error("JSON not found");
+        const games = await response.json();
+
+        const homeContainer = document.getElementById('game-container');
+        const playerWrapper = document.getElementById('game-player');
+
+        // --- HOME PAGE LOGIC ---
+        if (homeContainer) {
+            const render = (data) => {
+                if (data.length === 0) {
+                    homeContainer.innerHTML = "<p>No games found.</p>";
+                    return;
+                }
+                homeContainer.innerHTML = data.map(game => `
+                    <a href="play.html?id=${game.id}" class="game-card">
+                        <img src="${game.thumbnail}" alt="${game.title}" onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'">
+                        <div class="card-info">
+                            <h3>${game.title}</h3>
+                            <p>${game.category}</p>
+                        </div>
+                    </a>
+                `).join('');
+            };
+
+            render(games);
+
+            const searchBar = document.getElementById('searchBar');
+            if (searchBar) {
+                searchBar.addEventListener('input', (e) => {
+                    const filtered = games.filter(g => 
+                        g.title.toLowerCase().includes(e.target.value.toLowerCase()) ||
+                        g.category.toLowerCase().includes(e.target.value.toLowerCase())
+                    );
+                    render(filtered);
+                });
+            }
+        }
+
+        // --- PLAY PAGE LOGIC ---
+        if (playerWrapper) {
+            const params = new URLSearchParams(window.location.search);
+            const gameId = parseInt(params.get('id'));
+            const game = games.find(g => g.id === gameId);
+
+            if (game) {
+                playerWrapper.innerHTML = `
+                    <div class="game-screen">
+                        <iframe src="${game.url}" allowfullscreen id="game-iframe"></iframe>
+                    </div>
+                    <div class="game-info-panel">
+                        <div class="game-title-area">
+                            <span class="category-pill">${game.category}</span>
+                            <h1>${game.title}</h1>
+                        </div>
+                        <div class="actions-area">
+                            <button onclick="toggleFullscreen()">⛶ Fullscreen</button>
+                        </div>
+                    </div>
+                `;
+                document.title = "Playing " + game.title;
+            } else {
+                playerWrapper.innerHTML = `<h1>Game not found</h1><a href="index.html">Back to Home</a>`;
+            }
+        }
+    } catch (err) {
+        console.error("Initialization error:", err);
     }
 }
 
-/**
- * HOME PAGE LOGIC
- * Runs if the element #game-container exists
- */
-async function initHomePage() {
-    const container = document.getElementById('game-container');
-    if (!container) return; // Exit if we aren't on the home page
-
-    const games = await fetchGames();
-    const searchBar = document.getElementById('searchBar');
-
-    // Function to render the HTML tiles
-    const render = (data) => {
-        container.innerHTML = data.map(game => `
-            <a href="play.html?id=${game.id}" class="game-card">
-                <img src="${game.thumbnail}" alt="${game.title}" loading="lazy">
-                <div class="card-info">
-                    <h3>${game.title}</h3>
-                    <p>${game.category}</p>
-                </div>
-            </a>
-        `).join('');
-    };
-
-    // Initial Render
-    render(games);
-
-    // Live Search Feature
-    if (searchBar) {
-        searchBar.addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase();
-            const filtered = games.filter(g => 
-                g.title.toLowerCase().includes(term) || 
-                g.category.toLowerCase().includes(term)
-            );
-            render(filtered);
-        });
+// Fullscreen helper
+window.toggleFullscreen = function() {
+    const elem = document.getElementById("game-iframe");
+    if (elem) {
+        if (elem.requestFullscreen) elem.requestFullscreen();
+        else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+        else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
     }
 }
 
-/**
- * PLAY PAGE LOGIC
- * Runs if the element #game-player exists
- */
-async function initPlayPage() {
-    const playerWrapper = document.getElementById('game-player');
-    if (!playerWrapper) return; // Exit if we aren't on the play page
-
-    // 1. Get the Game ID from the URL (e.g., play.html?id=1)
-    const urlParams = new URLSearchParams(window.location.search);
-    const gameId = parseInt(urlParams.get('id'));
-
-    // 2. Find the game in our JSON data
-    const games = await fetchGames();
-    const game = games.find(g => g.id === gameId);
-
-    if (game) {
-    playerWrapper.innerHTML = `
-        <div class="game-screen">
-            <iframe src="${game.url}" allowfullscreen id="game-iframe"></iframe>
-        </div>
-        <div class="game-info-panel">
-            <div class="game-title-area">
-                <span class="category-pill">${game.category}</span>
-                <h1>${game.title}</h1>
-            </div>
-            <div class="actions-area">
-                <button onclick="toggleFullscreen()">⛶ Fullscreen</button>
-            </div>
-        </div>
-    `;
-    document.title = "Playing " + game.title + " | Save and Load2";
-}else {
-        playerWrapper.innerHTML = `<h2>Game not found! <a href="index.html">Go Back</a></h2>`;
-    }
-}
-
-// Start the appropriate logic based on the page
-initHomePage();
-initPlayPage();
+init();
