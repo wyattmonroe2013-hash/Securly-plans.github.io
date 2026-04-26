@@ -1,16 +1,16 @@
 [
   {
     "id": 1,
-    "title": "Space Invaders",
+    "title": "Space Explorer",
     "thumbnail": "assets/images/space.jpg",
     "category": "Action",
-    "url": "games/space-invaders/index.html"
+    "url": "https://example.com/games/space-explorer"
   },
   {
     "id": 2,
-    "title": "Retro Racer",
-    "thumbnail": "assets/images/race.jpg",
-    "category": "Driving",
-    "url": "https://external-game-link.com"
+    "title": "Neon Racer",
+    "thumbnail": "assets/images/racer.jpg",
+    "category": "Racing",
+    "url": "https://example.com/games/neon-racer"
   }
 ]
