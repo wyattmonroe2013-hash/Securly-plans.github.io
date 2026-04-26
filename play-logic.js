@@ -16,7 +16,7 @@ async function initPlayer() {
             document.getElementById('gameTitle').innerText = game.title;
             document.getElementById('gameFrame').src = game.url;
             // You can add more fields to your JSON like "description"
-            document.getElementById('gameDescription').innerText = game.description || "Enjoy this game on CloudGames!";
+            document.getElementById('gameDescription').innerText = game.description || "Enjoy this game on Save & Load3!";
         } else {
             document.getElementById('gameTitle').innerText = "Game Not Found";
         }
