@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Game - CloudGames</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .play-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .game-info {
+            margin-top: 20px;
+            background: #2d2d2d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="play-container">
+        <a href="index.html" class="back-btn">← Back to Games</a>
+        
+        <div class="video-wrapper">
+            <iframe id="gameFrame" src="" allowfullscreen></iframe>
+        </div>
 
+        <div class="game-info">
+            <h1 id="gameTitle">Loading...</h1>
+            <p id="gameDescription">Select a game to start playing.</p>
+        </div>
+    </div>
+
+    <script src="play-logic.js"></script>
+</body>
+</html>
