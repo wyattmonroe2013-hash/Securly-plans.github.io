@@ -12,7 +12,7 @@ async function initPlayer() {
         const game = games.find(g => g.id == gameId);
 
         if (game) {
-            document.title = `${game.title} - CloudGames`;
+            document.title = `${game.title} - Save & Load2`;
             document.getElementById('gameTitle').innerText = game.title;
             document.getElementById('gameFrame').src = game.url;
             // You can add more fields to your JSON like "description"
