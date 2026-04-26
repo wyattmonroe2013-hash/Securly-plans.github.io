@@ -11,7 +11,7 @@ async function loadGames() {
 function displayGames(games) {
     const grid = document.getElementById('gameGrid');
     grid.innerHTML = games.map(game => `
-        <div class="game-card" onclick="window.location.href='${game.url}'">
+        <div class="game-card" onclick="window.location.href='play.html?id=${game.id}'">
             <img src="${game.thumbnail}" alt="${game.title}">
             <h3>${game.title}</h3>
         </div>
