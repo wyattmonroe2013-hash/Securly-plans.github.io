@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "title": "Space Explorer",
-    "thumbnail": "assets/images/space.jpg",
+    "title": "Ragdoll Archers",
+    "thumbnail": "assets/images/RagdollA.svg",
     "category": "Action",
     "url": "https://example.com/games/space-explorer"
   },
