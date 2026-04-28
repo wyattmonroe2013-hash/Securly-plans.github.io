@@ -8,9 +8,9 @@
   },
   {
     "id": 2,
-    "title": "Neon Racer",
-    "thumbnail": "assets/images/racer.jpg",
-    "category": "Racing",
-    "url": "https://example.com/games/neon-racer"
+    "title": "Tomb Of The Mask",
+    "thumbnail": "assets/images/totm.jpg",
+    "category": "Action",
+    "url": ""
   }
 ]
