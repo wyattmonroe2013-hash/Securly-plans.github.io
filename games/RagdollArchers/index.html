@@ -1,72 +1,80 @@
 <!DOCTYPE html>
-<html lang="en-us"><head>
-<script src="/vs/gameloader-helper.js"></script>
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Ragdoll Archers</title>
-<link rel="stylesheet" href="style.css">
-<body>
-<div id="unity-container" class="unity-desktop">
-<canvas id="unity-canvas"></canvas>
-</div>
-<div id="loading-cover">
-<div id="unity-loading-bar">
-<div id="unity-logo"><img src="logo.jpeg"></div>
-<div class="progress-spinner-container">
-<div class="spinner-left"><img src="spinner.png"></div>
-<div id="unity-progress-bar-empty">
-<div id="unity-progress-bar-full"></div>
-</div>
-<div class="spinner-right"><img src="spinner.png"></div>
-</div>
-</div>
-</div>
-<script>
-    const buildUrl = "Build";
-    const loaderUrl = buildUrl + "/v111.loader.js";
-    const config = {
-      dataUrl: buildUrl + "/6697b6deba8b617c67b69c55dcd07cb1.data.unityweb",
-      frameworkUrl: buildUrl + "/0be3c3ee7115b26e1ae28e643afdf1f2.js.unityweb",
-      codeUrl: buildUrl + "/b3397c29f6878557c1c614cbf9e196ea.wasm.unityweb",
-      streamingAssetsUrl: "StreamingAssets",
-      companyName: "Ericetto",
-      productName: "Ragdoll Archers",
-      productVersion: "0.1",
-    };
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragdoll Archers - Save & Load2</title>
+    <meta name="description" content="Play Ragdoll Archers online - An exciting archery battle game where you compete against other archers in intense bow-and-arrow combat!">
+    <link rel="canonical" href="https://ragdollarchers.com" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1d1d1f;
+        }
+        .game-container {
+            aspect-ratio: 16/9;
+            max-height: 80vh;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-6" style="color: #1d1d1f;">
+            Ragdoll Archers
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-center mb-8" style="color: #86868b;">
+            Master the art of archery in this exciting physics-based battle game!
+        </p>
 
-    const container = document.querySelector("#unity-container");
-    const canvas = document.querySelector("#unity-canvas");
-    const loadingCover = document.querySelector("#loading-cover");
-    const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
-    const progressBarFull = document.querySelector("#unity-progress-bar-full");
+        <div class="game-container w-full mb-12 rounded-xl overflow-hidden shadow-2xl">
+            <iframe src="https://www.crazygames.com/embed/ragdoll-archers" 
+                    style="width: 100%; height: 100%;" 
+                    frameborder="0" 
+                    allow="gamepad *;">
+            </iframe>
+        </div>
 
-    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-      container.className = "unity-mobile";
-    }
-    
-    loadingCover.style.display = "";
+        <div class="space-y-8 mb-12">
+            <section>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-4" style="color: #0066cc;">
+                    Game Overview
+                </h2>
+                <p class="text-lg leading-relaxed" style="color: #1d1d1f;">
+                    Ragdoll Archers is an engaging online archery combat game where players test their skills in intense bow-and-arrow battles. With realistic physics mechanics and strategic gameplay, every match offers a unique challenge.
+                </p>
+            </section>
 
-    const unityLoader = document.createElement("script");
-    unityLoader.src = loaderUrl;
-    unityLoader.onload = () => {
-      createUnityInstance(canvas, config, (progress) => {
-        progressBarEmpty.style.display = "";
-        progressBarFull.style.width = `${100 * progress}%`;
-      }).then((unityInstance) => {
-        window.unityInstance = unityInstance;
-        loadingCover.style.display = "none";
-      }).catch((message) => {
-        alert(message);
-      });
-    };
-    document.body.appendChild(unityLoader);
+            <section>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-4" style="color: #0066cc;">
+                    Key Features
+                </h2>
+                <ul class="list-disc list-inside text-lg space-y-2" style="color: #1d1d1f;">
+                    <li>Physics-based archery mechanics</li>
+                    <li>Multiple game modes and challenges</li>
+                    <li>Real-time multiplayer battles</li>
+                    <li>Various power-ups and special abilities</li>
+                    <li>Intuitive controls for both PC and mobile</li>
+                </ul>
+            </section>
 
-    document.addEventListener("pointerdown", () => {
-      container.focus();
-      window.focus();
-      canvas.focus();
-    });
+            <section>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-4" style="color: #0066cc;">
+                    How to Play
+                </h2>
+                <p class="text-lg leading-relaxed" style="color: #1d1d1f;">
+                    Use your mouse or touch controls to aim and shoot arrows at your opponents. Pull back your bow to increase power, and release to fire. Time your shots carefully and use the environment to your advantage. Collect power-ups to gain special abilities and dominate the battlefield!
+                </p>
+            </section>
+        </div>
 
-  </script>
-</body></html>
+        <footer class="text-center" style="color: #86868b;">
+            <p class="text-sm">
+                © 2024 RagdollArchers.com - All rights reserved
+            </p>
+        </footer>
+    </div>
+</body>
+</html> 
