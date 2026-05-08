@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Ragdoll Archers",
+    "title": "Drift Boss",
     "thumbnail": "assets/images/RagdollA.svg",
-    "category": "Action",
-    "url": "./games/RagdollArchers/index.html"
+    "category": "Racing",
+    "url": "./games/Driftboss/index.html"
   },
   {
     "id": 2,
