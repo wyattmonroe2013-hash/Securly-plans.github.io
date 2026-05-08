@@ -12,5 +12,12 @@
     "thumbnail": "assets/images/totm.jpg",
     "category": "Action",
     "url": "./games/totm/index.html"
-  }
+  },
+ {
+    "id": 3,
+    "title": "About Save & Load2",
+    "thumbnail": "assets/images/.svg",
+    "category": "Racing",
+    "url": "./games/about/index.html"
+  },
 ]
