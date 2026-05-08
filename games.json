@@ -9,7 +9,7 @@
   {
     "id": 2,
     "title": "Tomb Of The Mask",
-    "thumbnail": "assets/images/totm.jpg",
+    "thumbnail": "./assets/images/61ljJZNJV0L.png",
     "category": "Action",
     "url": "./games/totm/index.html"
   },
