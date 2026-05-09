@@ -16,8 +16,8 @@
   {
     "id": 3,
     "title": "Slither.io",
-    "thumbnail": "assets/images/slither.webp",
-    "category": "io",
-    "url": "./games/slither/index.html"
+    "thumbnail": "assets/images/tiny-fishing.png",
+    "category": "Casual",
+    "url": "./games/tiny-fishing-main/index.htmll"
   }
 ]
