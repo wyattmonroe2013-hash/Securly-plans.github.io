@@ -15,9 +15,9 @@
   },
   {
     "id": 3,
-    "title": "Slither.io",
+    "title": "Tiny Fishing",
     "thumbnail": "assets/images/tiny-fishing.png",
     "category": "Casual",
-    "url": "./games/tiny-fishing-main/index.htmll"
+    "url": "./games/tiny-fishing-main/index.html"
   }
 ]
