@@ -16,7 +16,7 @@
   {
     "id": 3,
     "title": "About Save & Load2",
-    "thumbnail": "assets/images/about.svg",
+    "thumbnail": "assets/images/about.webp",
     "category": "Racing",
     "url": "./games/about/index.html"
   }
