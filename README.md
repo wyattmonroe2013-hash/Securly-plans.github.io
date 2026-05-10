@@ -1,7 +1,8 @@
-This Is Save and Load2
+This Is Emerald
 ----------------------
-A Republish of the original by Monroe Entertainment
+A Site made by Securly-plans (12 yrs old) To "Pass The Time"
 ---------------------------------------------------
 Made By Securly-Plans (Seth Fleuter) 
 ------------------------------------
-Status: 34% complete|=|Unblock Ext. - not given by Monroe yet...
+Status: Framework (site) complete, adding games and other fixes - 
+100%                                 2%                   total: 22.5% potential
