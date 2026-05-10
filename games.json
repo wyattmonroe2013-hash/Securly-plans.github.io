@@ -19,5 +19,12 @@
     "thumbnail": "assets/images/tiny-fishing.png",
     "category": "Casual",
     "url": "./games/tiny-fishing-main/index.html"
+  },
+ {
+    "id": 4,
+    "title": "Bitlife",
+    "thumbnail": "./games/bitlife/logo.png",
+    "category": "Casual",
+    "url": "./games/bitlife/index.html"
   }
 ]
