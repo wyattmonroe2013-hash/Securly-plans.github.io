@@ -26,5 +26,12 @@
     "thumbnail": "./games/bitlife/logo.png",
     "category": "Casual",
     "url": "./games/bitlife/index.html"
+  },
+ {
+    "id": 5,
+    "title": "Ragdoll Archers",
+    "thumbnail": "./games/RagdollA/logo.jpeg",
+    "category": "Casual",
+    "url": "./games/RagdollA/index.html"
   }
 ]
