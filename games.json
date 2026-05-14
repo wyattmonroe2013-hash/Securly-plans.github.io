@@ -40,5 +40,12 @@
     "thumbnail": "./assets/images/cover.webp",
     "category": "Platformer",
     "url": "./games/60sbr/index.html"
+  },
+{
+    "id": 7,
+    "title": "Spacewaves",
+    "thumbnail": "./games/spacewaves/logo.png",
+    "category": "Casual",
+    "url": "./games/spacewaves/index.html"
   }
 ]
