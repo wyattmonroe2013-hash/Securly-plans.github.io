@@ -54,5 +54,12 @@
     "thumbnail": "./assets/images/GUNSPIN-f320x180.webp",
     "category": "Casual",
     "url": "./games/gunspin/index.html"
+  },
+{
+    "id": 9,
+    "title": "Ragdoll Archers",
+    "thumbnail": "./games/ragdoll-archers/logo.jpeg",
+    "category": "Action",
+    "url": "./games/ragdoll-archers/index.html"
   }
 ]
