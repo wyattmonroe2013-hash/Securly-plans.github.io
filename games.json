@@ -47,5 +47,12 @@
     "thumbnail": "./games/spacewaves/logo.png",
     "category": "Casual",
     "url": "./games/spacewaves/index.html"
+  },
+{
+    "id": 8,
+    "title": "GunSpin",
+    "thumbnail": "./assets/images/GUNSPIN-f320x180.webp",
+    "category": "Casual",
+    "url": "./games/gunspin/index.html"
   }
 ]
