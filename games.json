@@ -58,7 +58,7 @@
 {
     "id": 9,
     "title": "Ragdoll Archers: (May Work.)",
-    "thumbnail": "./games/ragdoll-archers/logo.jpeg",
+    "thumbnail": "./assets/images/alone.webp",
     "category": "Action",
     "url": "./games/Ragdoll-Archers/index.html"
   }
