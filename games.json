@@ -72,7 +72,7 @@
 {
     "id": 11,
     "title": "GladdiHoppers",
-    "thumbnail": "./games/Ragdoll-Hit/3c892779be9dabb3589586c83ad3eeed.png",
+    "thumbnail": "./assets/images/glad.webp",
     "category": "Strategy",
     "url": "./games/gladdihoppers/index.html"
   }
