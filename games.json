@@ -62,4 +62,10 @@
     "category": "Action",
     "url": "./games/Ragdoll-Archers/index.html"
   }
+  {
+    "id": 9,
+    "title": "Test",
+    "thumbnail": "./assets/images/alone.webp",
+    "category": "Action",
+    "url": "./games/Hi/index.html"
 ]
