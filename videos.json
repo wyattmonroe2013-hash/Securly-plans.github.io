@@ -1,1 +1,9 @@
-
+[
+  {
+    "id": 1,
+    "title": "(test: seth edit)",
+    "thumbnail": "assets/images/earth-gray.webp",
+    "category": "silly/joke",
+    "url": "./Videos/seth-edit/index.html"
+  }
+]
