@@ -7,14 +7,12 @@ import {
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_BUCKET",
-  messagingSenderId: "YOUR_ID",
-  appId: "YOUR_APP_ID"
-
+  apiKey: "AIzaSyBLghWLth0syJhARDMWiJ7xNwyJAh7MWjQ",
+  authDomain: "securly-plans-main.firebaseapp.com",
+  projectId: "securly-plans-main",
+  storageBucket: "securly-plans-main.firebasestorage.app",
+  messagingSenderId: "613499545769",
+  appId: "1:613499545769:web:baa071714434c4814de1b8"
 };
 
 const app = initializeApp(firebaseConfig);
