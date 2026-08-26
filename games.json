@@ -129,7 +129,7 @@
   },
   {
     "id": 17,
-    "title": "EmeraldOS Gold",
+    "title": "EmeraldOS Gold Live",
     "thumbnail": "assets/images/EmeraldOS_Gold.png",
     "category": "OSProject",
     "url": "Gold/EmeraldOS/emeraldos-gold-introduction.html",
@@ -143,8 +143,16 @@
    "url": "EmeraldOS",
    "vip": false
   },
+{
+   "id": 20,
+   "title": "Drive Mad",
+   "category": "Casual",
+   "thumbnail": "./games/drive-mad/menu-assets/new-logo.png",
+   "url": "./games/drive-mad/index.html",
+   "vip": false
+  },
  {
-   "id": 19,
+   "id": 21,
    "title": "Dreadhead Parkour",
    "category": "Casual",
    "thumbnail": "https://tse2.mm.bing.net/th/id/OIP.hHZuRplArS-FkxEogwbaPQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
@@ -152,11 +160,11 @@
    "vip": false
   },
   {
-   "id": 20,
-   "title": "Monkey Mart",
+   "id": 22,
+   "title": "Hotel Tycoon",
    "category": "Casual",
-   "thumbnail": "https://tse3.mm.bing.net/th/id/OIP.tZZhGVHN4DoR5woRMtNsaAHaFD?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
-   "url": "games/monkey-mart/index.html",
+   "thumbnail": "",
+   "url": "games/hotel/index.html",
    "vip": false
   }
 ]
